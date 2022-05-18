@@ -61,7 +61,7 @@ namespace challenge.Controllers
         [HttpGet("NumberOfReports/{id}", Name = "getNumberOfReportsByEmployeeId")]
         public IActionResult getNumberOfReportsByEmployeeId(String id)
         {
-            _logger.LogDebug($"Received employee get request for '{id}'");
+            _logger.LogDebug($"Received direct report count request for employee '{id}'");
 
             //Build the ReportingStructure object for the desired Employee
             var reportingStructure = _employeeService.CountDirectReports(id);
